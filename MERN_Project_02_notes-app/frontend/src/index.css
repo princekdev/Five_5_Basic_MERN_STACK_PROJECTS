@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ink-950: #0a0908;
+    --ink-900: #12100e;
+    --ink-800: #1c1916;
+    --ink-700: #2a2520;
+    --ink-600: #3d3830;
+    --amber-400: #fbbf24;
+    --amber-500: #f59e0b;
+    --parchment-50: #fdf9f0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html { 
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--ink-950);
+    color: var(--parchment-50);
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: rgba(251, 191, 36, 0.3);
+    color: #fdf9f0;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--ink-900);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--ink-600);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--amber-500);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-amber-500 hover:bg-amber-400 text-ink-950 font-semibold px-5 py-2.5 rounded-lg 
+           transition-all duration-200 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed
+           disabled:active:scale-100;
+  }
+
+  .btn-ghost {
+    @apply text-parchment-100 hover:bg-ink-700 px-4 py-2 rounded-lg transition-all duration-200;
+  }
+
+  .input-field {
+    @apply w-full bg-ink-800 border border-ink-600 text-parchment-50 placeholder-ink-600
+           rounded-lg px-4 py-2.5 outline-none focus:border-amber-500 focus:ring-1 
+           focus:ring-amber-500/30 transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-ink-800 border border-ink-700 rounded-xl p-5 
+           hover:border-ink-600 transition-all duration-200;
+  }
+
+  .tag {
+    @apply text-xs font-medium px-2.5 py-0.5 rounded-full;
+  }
+}
