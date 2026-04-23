@@ -15,7 +15,7 @@ const taskSchema = new mongoose.Schema(
       minlength: [1, 'Title cannot be empty'],
       maxlength: [100, 'Title cannot exceed 100 characters'],
     },
-    description: {
+    description: { 
       type: String,
       trim: true,
       maxlength: [500, 'Description cannot exceed 500 characters'],
