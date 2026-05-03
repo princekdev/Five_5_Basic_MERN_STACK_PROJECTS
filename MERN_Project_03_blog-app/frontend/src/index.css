@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-parchment text-ink-900 font-sans antialiased;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23a29478' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-ink-900 text-parchment px-5 py-2.5 rounded font-sans text-sm font-medium
+           hover:bg-ink-700 active:bg-ink-950 transition-colors duration-150
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply border border-ink-300 text-ink-700 px-5 py-2.5 rounded font-sans text-sm font-medium
+           hover:bg-ink-100 active:bg-ink-200 transition-colors duration-150
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-danger {
+    @apply bg-red-700 text-white px-5 py-2.5 rounded font-sans text-sm font-medium
+           hover:bg-red-800 active:bg-red-900 transition-colors duration-150
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-accent {
+    @apply bg-accent text-white px-5 py-2.5 rounded font-sans text-sm font-medium
+           hover:bg-accent-light active:bg-orange-800 transition-colors duration-150
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .input-field {
+    @apply w-full border border-ink-200 rounded px-4 py-2.5 font-sans text-sm text-ink-900
+           bg-white placeholder-ink-400 focus:outline-none focus:border-ink-500
+           focus:ring-1 focus:ring-ink-300 transition-colors duration-150;
+  }
+
+  .card {
+    @apply bg-white border border-ink-100 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+
+  .prose-content {
+    @apply font-sans text-ink-800 leading-relaxed text-base;
+  }
+
+  .prose-content p {
+    @apply mb-4;
+  }
+
+  .tag-badge {
+    @apply inline-block bg-cream text-ink-600 text-xs font-mono px-2.5 py-1 rounded-full border border-ink-200;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #ede9e0;
+}
+::-webkit-scrollbar-thumb {
+  background: #a29478;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #726350;
+}
+
+/* Page fade-in animation */
+.page-enter {
+  animation: fadeSlideIn 0.3s ease forwards;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
