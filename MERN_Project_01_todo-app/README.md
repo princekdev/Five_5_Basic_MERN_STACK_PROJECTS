@@ -120,7 +120,7 @@ Or separately:
 ```bash
 # Terminal 1
 cd backend && npm run dev
-
+and 
 # Terminal 2
 cd frontend && npm start
 ```
