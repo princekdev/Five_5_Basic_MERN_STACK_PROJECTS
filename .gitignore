@@ -17,7 +17,7 @@ build/
 *.log
 npm-debug.log*
 
-# OS
+# OS 
 .DS_Store
 Thumbs.db
 
@@ -26,5 +26,5 @@ Thumbs.db
 .idea/
 *.swp
 
-# Docker volumes
+# Docker volumes 
 mongo_data/
