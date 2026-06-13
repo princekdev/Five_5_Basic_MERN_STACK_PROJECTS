@@ -54,7 +54,9 @@ export const AuthProvider = ({ children }) => {
         localStorage.clear();
         dispatch({ type: 'AUTH_LOGOUT' });
       }
-    } 
+    } else {
+      dispatch({ type: 'AUTH_LOGOUT' });
+    }
   }, []);
 
   const persistAuth = (token, user) => {
