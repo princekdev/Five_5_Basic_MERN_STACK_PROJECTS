@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "/api",
+  baseURL: "https://notes-app-backend-5zsg.onrender.com/api",
   headers: { "Content-Type": "application/json" },
   timeout: 10000,
 });
@@ -30,4 +30,3 @@ api.interceptors.response.use(
 );
 
 export default api;
-  
