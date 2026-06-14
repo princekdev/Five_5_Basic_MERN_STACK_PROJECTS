@@ -119,7 +119,9 @@ Deployment:
 ---
 ## Project Structure  
 ## Project Structure
+## Project Structure
 
+```text
 taskr/
 ├── backend/
 │   ├── config/
@@ -139,6 +141,7 @@ taskr/
 │   │   └── tasks.js
 │   ├── .env.example
 │   └── server.js
+
 └── frontend/
     ├── public/
     │   └── index.html
@@ -150,6 +153,7 @@ taskr/
         ├── utils/
         ├── App.jsx
         └── index.css
+```
 
 The project follows a scalable full-stack architecture with clear separation of concerns across frontend, backend, business logic, middleware, API routes, and database models.
 
